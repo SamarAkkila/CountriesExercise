@@ -11,7 +11,7 @@ class CountryVC: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    private let searchController = UISearchController(searchResultsController: nil)
     
     //MARK: - Properties
     let viewModel = CountryViewModel()
@@ -44,11 +44,15 @@ class CountryVC: UIViewController {
     
     private func setupView() {
         self.title = "Countries"
-        searchBar.delegate = self
         view.addSubview(spinner)
         spinner.center = view.center
         spinner.startAnimating()
-        searchBar.placeholder = "Search Country or Capital"
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Country or Capital"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+       
     }
     
     private func fetchCountryData() {
@@ -89,9 +93,10 @@ extension CountryVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 
-// MARK: - UISearchBarDelegate
-extension CountryVC: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+// MARK: - UISearchResultsUpdating
+extension CountryVC: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text ?? ""
         viewModel.filterCountries(by: searchText)
     } 
 }

@@ -16,18 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cMN-2H-vNS">
-                                <rect key="frame" x="0.0" y="162" width="393" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="O6J-it-M4I"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RAE-Tl-rH0"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RMR-pS-QDI">
-                                <rect key="frame" x="0.0" y="206" width="393" height="578"/>
+                                <rect key="frame" x="0.0" y="162" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="lze-UP-dLn"/>
@@ -38,18 +28,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cMN-2H-vNS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HFk-zO-vUJ"/>
-                            <constraint firstItem="RMR-pS-QDI" firstAttribute="top" secondItem="cMN-2H-vNS" secondAttribute="bottom" id="HRP-Jg-fSi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RMR-pS-QDI" secondAttribute="bottom" id="WPf-c0-vBv"/>
+                            <constraint firstItem="RMR-pS-QDI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fHn-lB-2lE"/>
                             <constraint firstItem="RMR-pS-QDI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hl1-bc-75D"/>
-                            <constraint firstItem="cMN-2H-vNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hvi-UZ-7sx"/>
-                            <constraint firstItem="cMN-2H-vNS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rMb-vC-cFf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RMR-pS-QDI" secondAttribute="trailing" id="t7A-fp-eAx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Z42-um-np2"/>
                     <connections>
-                        <outlet property="searchBar" destination="cMN-2H-vNS" id="d4e-co-8UP"/>
                         <outlet property="tableView" destination="RMR-pS-QDI" id="32y-yV-Rxi"/>
                     </connections>
                 </viewController>
