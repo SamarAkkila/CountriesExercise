@@ -18,5 +18,7 @@ The app takes advantage of Swift Concurrency (async/await) for smooth asynchrono
     
     # App Demo
     iPhone (Portrait & Landscape)
-    
+    https://github.com/user-attachments/assets/373124da-3dfe-471d-8e0d-781db5cb31db
     iPad (Portrait & Landscape)
+    https://github.com/user-attachments/assets/fe1d3167-14f6-4dd8-8c91-df2925e1ff6c
+
