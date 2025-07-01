@@ -4,7 +4,7 @@
 
 This iOS app is built using Swift and follows the Model-View-ViewModel (MVVM) architecture to fetch and display country data from a remote API. It supports real-time filtering based on user input and provides a clean, responsive UI using UIKit.
 
-The app takes advantage of Swift Concurrency (async/await) for smooth asynchronous operations and adopts a protocol-oriented programming approach to ensure modularity and flexibility for future enhancements.
+The app takes advantage of Swift Concurrency (async/await) for smooth and efficient asynchronous operations, and is structured to support future scalability and modularity through clear separation of concerns.
 
 
 #🔑 Features
